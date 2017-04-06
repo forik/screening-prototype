@@ -1,0 +1,23 @@
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Employee</th>
+      <th>Team Name</th>
+      <th>Screening Name</th>
+      <th>Manager</th>
+      <th>Skip Manager</th>
+      <th>Expiration Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of data">
+      <td>{{item.employee}}</td>
+      <td>{{item.teamName}}</td>
+      <td>{{item.screeningName}}</td>
+      <td>{{item.manager}}</td>
+      <td>{{item.skipManager}}</td>
+      <td>{{item.expirationDate}}</td>
+    </tr>
+  </tbody>
+  <ngb-pagination [collectionSize]="totalItems" [pageSize]="take" [(page)]="page" (pageChange)="onPageChange($event)"></ngb-pagination>
+</table>
